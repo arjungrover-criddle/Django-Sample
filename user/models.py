@@ -47,3 +47,6 @@ class UserInfo(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return "{}:{}".format(self.first_name,self.phone_number)
+
+    def get_full_name(self):
+        return "{} {}".format(self.first_name, self.last_name)
